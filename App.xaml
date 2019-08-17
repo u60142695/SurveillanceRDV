@@ -1,0 +1,14 @@
+﻿<Application x:Class="SurveillanceRDV.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SurveillanceRDV"
+             xmlns:Converters="clr-namespace:SurveillanceRDV.Converters"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Converters:PrefectureQueryResultToRectangleColor x:Key="uiPrefectureQueryResultToRectangleColor" />
+            <Converters:PrefectureStatusToColorConverter x:Key="uiPrefectureStatusToColorConverter" />
+            <Converters:PrefectureStatusToVisibilityConverter x:Key="uiPrefectureStatusToVisibilityConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
