@@ -50,7 +50,9 @@ namespace SurveillanceRDV.Requestors
 
                 Console.WriteLine(DateTime.Now.ToString() + " - Creteil Response: " + responseString);
 
-                return !responseString.Contains("Aucun rendez-vous");
+                //return !responseString.Contains("Aucun rendez-vous");
+
+                return false;
             }
             catch (Exception ex)
             {
