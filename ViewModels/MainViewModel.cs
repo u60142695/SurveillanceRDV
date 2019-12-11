@@ -72,7 +72,7 @@ namespace SurveillanceRDV.ViewModels
         {
             AllocConsole();
 
-            _statusText = "Application ready.";
+            _statusText = "Logiciel pret.";
 
             PopulatePrefectures();
             
@@ -96,56 +96,75 @@ namespace SurveillanceRDV.ViewModels
         private void PopulatePrefectures()
         {
             // 1. Sarcelles
-            Prefectures.Add(new Prefecture("95 - Sarcelles", new GenericPrefectureRequestor() { TargetURL = @"http://www.val-doise.gouv.fr/booking/create/5260/0" }));
+            Prefectures.Add(new Prefecture("95_SARCELLES",
+                                           "95 - Sarcelles", 
+                                           @"http://www.val-doise.gouv.fr/booking/create/5260/0", 
+                                           new GenericPrefectureRequestor() { TargetURL = @"http://www.val-doise.gouv.fr/booking/create/5260/0" },
+                                           15));
 
             // 2. Bobigny
-            Prefectures.Add(new Prefecture("93 - Bobigny", new GenericPrefectureRequestor() { TargetURL = @"http://www.seine-saint-denis.gouv.fr/booking/create/9829/0" }));
+            Prefectures.Add(new Prefecture("93_BOBIGNY",
+                                           "93 - Bobigny", 
+                                           @"http://www.seine-saint-denis.gouv.fr/booking/create/9829/0",
+                                           new GenericPrefectureRequestor() { TargetURL = @"http://www.seine-saint-denis.gouv.fr/booking/create/9829/0" },
+                                           15));
 
             // 3. Le Raincy
-            Prefectures.Add(new Prefecture("93 - Le Raincy", new GenericPrefectureRequestor() { TargetURL = @"http://www.seine-saint-denis.gouv.fr/booking/create/10317/0" }));
+            Prefectures.Add(new Prefecture("93_RAINCY",
+                                           "93 - Le Raincy",
+                                           @"http://www.seine-saint-denis.gouv.fr/booking/create/10317/0",
+                                           new GenericPrefectureRequestor() { TargetURL = @"http://www.seine-saint-denis.gouv.fr/booking/create/10317/0" },
+                                           15));
 
             // 4. Nanterre
-            Prefectures.Add(new Prefecture("92 - Nanterre", new GenericPrefectureRequestor() { TargetURL = @"http://www.hauts-de-seine.gouv.fr/booking/create/12491" }));
+            Prefectures.Add(new Prefecture("92_NANTERRE",
+                                           "92 - Nanterre", 
+                                           @"http://www.hauts-de-seine.gouv.fr/booking/create/12491",
+                                           new GenericPrefectureRequestor() { TargetURL = @"http://www.hauts-de-seine.gouv.fr/booking/create/12491" },
+                                           15));
 
             // 5. Creteil
-            Prefectures.Add(new Prefecture("94 - Creteil", new CreteilPrefectureRequestor()));
+            Prefectures.Add(new Prefecture("94_CRETEIL",
+                                           "94 - Creteil",
+                                           @"https://rdv-etrangers-94.interieur.gouv.fr/eAppointmentpref94/element/jsp/specific/pref94.jsp",
+                                           new CreteilPrefectureRequestor(),
+                                           15));
         }
-
-        private int _secondsUntilQuery = 0;
-
+        
         private void PrefectureQueryRoutine()
         {
             while(true)
             {
-                if(_secondsUntilQuery == 0)
+                foreach (Prefecture pPrefecture in Prefectures)
                 {
-                    foreach (Prefecture pPrefecture in Prefectures)
+                    if (pPrefecture.Enabled)
                     {
-                        pPrefecture.Status = ePrefectureStatus.Querying;
-
-                        StatusText = "Interrogation de " + pPrefecture.Name;
-
-                        bool? bResult = pPrefecture.Requestor.Request();
-                        
-                        pPrefecture.Status = bResult == null ? ePrefectureStatus.Error : (bResult == true ? ePrefectureStatus.AppointmentAvailable : ePrefectureStatus.AppointmentUnavailable);
-                        
-                        if(pPrefecture.Status == ePrefectureStatus.AppointmentAvailable)
+                        if (pPrefecture.SecondsUntilQuery == 0)
                         {
-                            SystemSounds.Asterisk.Play();
+                            pPrefecture.Status = ePrefectureStatus.Querying;
+
+                            StatusText = "Interrogation de " + pPrefecture.Name;
+
+                            bool? bResult = pPrefecture.Requestor.Request();
+
+                            pPrefecture.Status = bResult == null ? ePrefectureStatus.Error : (bResult == true ? ePrefectureStatus.AppointmentAvailable : ePrefectureStatus.AppointmentUnavailable);
+
+                            if (pPrefecture.Status == ePrefectureStatus.AppointmentAvailable)
+                            {
+                                SystemSounds.Asterisk.Play();
+                            }
+
+                            pPrefecture.SecondsUntilQuery = pPrefecture.QueryTime;
+                        }
+                        else
+                        {
+                            pPrefecture.SecondsUntilQuery--;
                         }
                     }
 
-                    StatusText = "Interrogation terminee.";
-
-                    _secondsUntilQuery = 90;
+                    StatusText = "Inactif.";
                 }
-                else
-                {
-                    _secondsUntilQuery--;
-
-                    StatusText = "Prochaine interrogation dans " + _secondsUntilQuery + " sec ...";
-                }
-
+                
                 Thread.Sleep(1000);
             }
         }

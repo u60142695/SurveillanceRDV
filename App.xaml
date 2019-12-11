@@ -9,6 +9,7 @@
             <Converters:PrefectureQueryResultToRectangleColor x:Key="uiPrefectureQueryResultToRectangleColor" />
             <Converters:PrefectureStatusToColorConverter x:Key="uiPrefectureStatusToColorConverter" />
             <Converters:PrefectureStatusToVisibilityConverter x:Key="uiPrefectureStatusToVisibilityConverter" />
+            <Converters:BooleanToVisibilityConverter x:Key="uiBooleanToVisibilityConverter" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

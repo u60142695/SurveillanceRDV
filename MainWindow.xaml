@@ -10,8 +10,8 @@
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Title="Surveillance RDV Prefecture" 
-        Height="270" 
-        Width="400"
+        Height="480" 
+        Width="640"
         Closed="Window_Closed"
         DataContext="{x:Static ViewModels:MainViewModel.Instance}">
     <Grid>
@@ -29,19 +29,23 @@
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.3*" />
-                            <ColumnDefinition Width="0.1*" />
-                            <ColumnDefinition Width="0.05*" />
-                            <ColumnDefinition Width="0.55*" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="200" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Content="{Binding Name}" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" />
-                        <Rectangle Grid.Column="1" Fill="{Binding Status, Converter={StaticResource uiPrefectureStatusToColorConverter}}" />
-                        <TextBlock Grid.Column="3" VerticalAlignment="Center" Visibility="{Binding Status, Converter={StaticResource uiPrefectureStatusToVisibilityConverter}, ConverterParameter={x:Static Models:ePrefectureStatus.AppointmentAvailable}}">
-                            <!--<Hyperlink NavigateUri="http://www.google.fr" RequestNavigate="Hyperlink_RequestNavigate">
+                        <Label Grid.Column="0" Content="{Binding SecondsUntilQuery}" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Visibility="{Binding Enabled, Converter={StaticResource uiBooleanToVisibilityConverter}}" />
+                        <CheckBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" IsChecked="{Binding Enabled}" />
+                        <Label Grid.Column="2" Content="{Binding Name}" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" />
+                        <Rectangle Grid.Column="3" Fill="{Binding Status, Converter={StaticResource uiPrefectureStatusToColorConverter}}" />
+                        <TextBlock Grid.Column="5" VerticalAlignment="Center" Visibility="{Binding Status, Converter={StaticResource uiPrefectureStatusToVisibilityConverter}, ConverterParameter={x:Static Models:ePrefectureStatus.AppointmentAvailable}}">
+                            <Hyperlink NavigateUri="{Binding RedirectURL}" RequestNavigate="Hyperlink_RequestNavigate">
                                 <TextBlock FontWeight="Bold" Foreground="Black">
                                     ->> vers Prise de RDV
                                 </TextBlock>
-                            </Hyperlink>-->
+                            </Hyperlink>
                         </TextBlock>
                     </Grid>
                 </DataTemplate>
