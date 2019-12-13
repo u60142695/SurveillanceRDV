@@ -100,35 +100,35 @@ namespace SurveillanceRDV.ViewModels
                                            "95 - Sarcelles", 
                                            @"http://www.val-doise.gouv.fr/booking/create/5260/0", 
                                            new GenericPrefectureRequestor() { TargetURL = @"http://www.val-doise.gouv.fr/booking/create/5260/0" },
-                                           15));
+                                           36));
 
             // 2. Bobigny
             Prefectures.Add(new Prefecture("93_BOBIGNY",
                                            "93 - Bobigny", 
                                            @"http://www.seine-saint-denis.gouv.fr/booking/create/9829/0",
                                            new GenericPrefectureRequestor() { TargetURL = @"http://www.seine-saint-denis.gouv.fr/booking/create/9829/0" },
-                                           15));
+                                           31));
 
             // 3. Le Raincy
             Prefectures.Add(new Prefecture("93_RAINCY",
                                            "93 - Le Raincy",
                                            @"http://www.seine-saint-denis.gouv.fr/booking/create/10317/0",
                                            new GenericPrefectureRequestor() { TargetURL = @"http://www.seine-saint-denis.gouv.fr/booking/create/10317/0" },
-                                           15));
+                                           34));
 
             // 4. Nanterre
             Prefectures.Add(new Prefecture("92_NANTERRE",
                                            "92 - Nanterre", 
                                            @"http://www.hauts-de-seine.gouv.fr/booking/create/12491",
                                            new GenericPrefectureRequestor() { TargetURL = @"http://www.hauts-de-seine.gouv.fr/booking/create/12491" },
-                                           15));
+                                           33));
 
             // 5. Creteil
             Prefectures.Add(new Prefecture("94_CRETEIL",
                                            "94 - Creteil",
                                            @"https://rdv-etrangers-94.interieur.gouv.fr/eAppointmentpref94/element/jsp/specific/pref94.jsp",
                                            new CreteilPrefectureRequestor(),
-                                           15));
+                                           30));
         }
         
         private void PrefectureQueryRoutine()
