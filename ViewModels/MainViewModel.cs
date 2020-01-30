@@ -100,28 +100,28 @@ namespace SurveillanceRDV.ViewModels
                                            "95 - Sarcelles", 
                                            @"http://www.val-doise.gouv.fr/booking/create/5260/0", 
                                            new GenericPrefectureRequestor() { TargetURL = @"http://www.val-doise.gouv.fr/booking/create/5260/0" },
-                                           72));
+                                           120));
 
             // 2. Bobigny
             Prefectures.Add(new Prefecture("93_BOBIGNY",
                                            "93 - Bobigny", 
                                            @"http://www.seine-saint-denis.gouv.fr/booking/create/9829/0",
                                            new GenericPrefectureRequestor() { TargetURL = @"http://www.seine-saint-denis.gouv.fr/booking/create/9829/0" },
-                                           71));
+                                           120));
 
             // 3. Le Raincy
             Prefectures.Add(new Prefecture("93_RAINCY",
                                            "93 - Le Raincy",
                                            @"http://www.seine-saint-denis.gouv.fr/booking/create/10317/0",
                                            new GenericPrefectureRequestor() { TargetURL = @"http://www.seine-saint-denis.gouv.fr/booking/create/10317/0" },
-                                           74));
+                                           120));
 
             // 4. Nanterre
             Prefectures.Add(new Prefecture("92_NANTERRE",
                                            "92 - Nanterre", 
                                            @"http://www.hauts-de-seine.gouv.fr/booking/create/12491",
                                            new GenericPrefectureRequestor() { TargetURL = @"http://www.hauts-de-seine.gouv.fr/booking/create/12491" },
-                                           73));
+                                           120));
 
             // 5. Creteil
             /*Prefectures.Add(new Prefecture("94_CRETEIL",
