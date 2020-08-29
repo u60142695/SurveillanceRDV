@@ -10,7 +10,7 @@
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Title="Surveillance RDV Prefecture" 
-        Height="480" 
+        Height="600" 
         Width="640"
         Closed="Window_Closed"
         DataContext="{x:Static ViewModels:MainViewModel.Instance}">

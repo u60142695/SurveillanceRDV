@@ -123,6 +123,34 @@ namespace SurveillanceRDV.ViewModels
                                            new GenericPrefectureRequestor() { TargetURL = @"http://www.hauts-de-seine.gouv.fr/booking/create/12491" },
                                            80));
 
+            // 5. Paris - VPF13
+            Prefectures.Add(new Prefecture("75_VPF13",
+                                           "75 - VPF-13",
+                                           @"http://pprdv.interieur.gouv.fr/booking/create/948",
+                                           new GenericPrefectureRequestor() { TargetURL = @"http://pprdv.interieur.gouv.fr/booking/create/948" },
+                                           80));
+
+            // 6. Paris - VPF17
+            Prefectures.Add(new Prefecture("75_VPF17",
+                                           "75 - VPF-17",
+                                           @"http://pprdv.interieur.gouv.fr/booking/create/953",
+                                           new GenericPrefectureRequestor() { TargetURL = @"http://pprdv.interieur.gouv.fr/booking/create/953" },
+                                           80));
+
+            // 7. Paris - SAL13
+            Prefectures.Add(new Prefecture("75_SAL13",
+                                           "75 - SAL-13",
+                                           @"http://pprdv.interieur.gouv.fr/booking/create/885",
+                                           new GenericPrefectureRequestor() { TargetURL = @"http://pprdv.interieur.gouv.fr/booking/create/885" },
+                                           80));
+
+            // 8. Paris - SAL17
+            Prefectures.Add(new Prefecture("75_SAL17",
+                                           "75 - SAL-17",
+                                           @"http://pprdv.interieur.gouv.fr/booking/create/876",
+                                           new GenericPrefectureRequestor() { TargetURL = @"http://pprdv.interieur.gouv.fr/booking/create/876" },
+                                           80));
+
             // 5. Creteil
             /*Prefectures.Add(new Prefecture("94_CRETEIL",
                                            "94 - Creteil",
