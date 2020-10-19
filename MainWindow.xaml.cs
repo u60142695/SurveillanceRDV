@@ -1,4 +1,5 @@
-﻿using System;
+using SurveillanceRDV.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -34,6 +35,11 @@ namespace SurveillanceRDV
         private void Window_Closed(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("notepad.exe", StatusLogger.FILEPATH);
         }
     }
 }

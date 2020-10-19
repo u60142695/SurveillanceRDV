@@ -93,6 +93,7 @@
     <Compile Include="Requestors\GenericPrefectureRequestor.cs" />
     <Compile Include="Requestors\IPrefectureRequestor.cs" />
     <Compile Include="Utilities\RegistryUtility.cs" />
+    <Compile Include="Utilities\StatusLogger.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

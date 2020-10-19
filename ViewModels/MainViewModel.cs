@@ -1,5 +1,6 @@
-﻿using SurveillanceRDV.Models;
+using SurveillanceRDV.Models;
 using SurveillanceRDV.Requestors;
+using SurveillanceRDV.Utilities;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -179,6 +180,8 @@ namespace SurveillanceRDV.ViewModels
 
                             if (pPrefecture.Status == ePrefectureStatus.AppointmentAvailable)
                             {
+                                StatusLogger.WriteEvent(pPrefecture.Id);
+
                                 SystemSounds.Asterisk.Play();
                             }
 

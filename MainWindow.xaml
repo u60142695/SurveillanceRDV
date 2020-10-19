@@ -1,4 +1,4 @@
-﻿<Window x:Class="SurveillanceRDV.MainWindow"
+<Window x:Class="SurveillanceRDV.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -53,6 +53,9 @@
         </ItemsControl>
         <StatusBar Grid.Row="1" Height="28">
             <StatusBarItem Content="{Binding StatusText}" FontSize="14" FontWeight="Bold" />
+            <StatusBarItem HorizontalAlignment="Right">
+                <Button Width="75" Height="24" Content="Event Log" Click="Button_Click" />
+            </StatusBarItem>
         </StatusBar>
     </Grid>
 </Window>
