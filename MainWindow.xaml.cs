@@ -42,5 +42,10 @@ namespace SurveillanceRDV
         {
             Process.Start("notepad.exe", StatusLogger.FILEPATH);
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Process.Start("notepad.exe", PrefectureConfiguration.FILE_PATH);
+        }
     }
 }

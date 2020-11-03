@@ -52,8 +52,11 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-        <StatusBar Grid.Row="1" Height="28">
+        <StatusBar Grid.Row="1" Height="32">
             <StatusBarItem Content="{Binding StatusText}" FontSize="14" FontWeight="Bold" />
+            <StatusBarItem HorizontalAlignment="Right">
+                <Button Width="100" Height="24" Content="Configuration" Click="Button_Click_1" />
+            </StatusBarItem>
             <StatusBarItem HorizontalAlignment="Right">
                 <Button Width="75" Height="24" Content="Event Log" Click="Button_Click" />
             </StatusBarItem>

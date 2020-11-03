@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>https://raw.githubusercontent.com/u60142695/SurveillanceRDV/master/publish/</InstallUrl>
     <UpdateUrl>https://raw.githubusercontent.com/u60142695/SurveillanceRDV/master/publish/</UpdateUrl>
-    <ApplicationRevision>13</ApplicationRevision>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -83,9 +83,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ChangeTimeWindow.xaml.cs">
-      <DependentUpon>ChangeTimeWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Converters\PrefectureQueryResultToRectangleColor.cs" />
     <Compile Include="Converters\PrefectureStatusToVisibilityConverter.cs" />
@@ -99,10 +96,6 @@
     <Compile Include="Utilities\RegistryUtility.cs" />
     <Compile Include="Utilities\StatusLogger.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Page Include="ChangeTimeWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -9,19 +9,19 @@ namespace SurveillanceRDV
 {
     public class PrefectureConfiguration
     {
-        private static string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\SurveillanceRDV.conf";
+        public static string FILE_PATH = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\SurveillanceRDV.conf";
 
         public static Dictionary<string, int> QueryTimes = new Dictionary<string, int>();
 
         public static void LoadConfiguration()
         {
-            if(!File.Exists(filePath))
+            if(!File.Exists(FILE_PATH))
             {
-                File.WriteAllText(filePath, "95_SARCELLES=75\r\n93_BOBIGNY=75\r\n93_RAINCY=75\r\n92_NANTERRE=75\r\n75_VPF13=75\r\n75_VPF17=75\r\n75_SAL13=75\r\n75_SAL17=75");
+                File.WriteAllText(FILE_PATH, "95_SARCELLES=75\r\n93_BOBIGNY=75\r\n93_RAINCY=75\r\n92_NANTERRE=75\r\n75_VPF13=75\r\n75_VPF17=75\r\n75_SAL13=75\r\n75_SAL17=75");
             }
 
             // Load File
-            string[] lines = File.ReadAllLines(filePath);
+            string[] lines = File.ReadAllLines(FILE_PATH);
             foreach(string line in lines)
             {
                 string[] data = line.Split(new char[] { '=' });
