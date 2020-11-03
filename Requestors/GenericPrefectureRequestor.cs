@@ -1,4 +1,4 @@
-﻿using SurveillanceRDV.ViewModels;
+using SurveillanceRDV.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,7 +28,7 @@ namespace SurveillanceRDV.Requestors
                 request.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8";
                 //request.KeepAlive = true;
                 request.Referer = TargetURL;
-                request.Headers.Add("Cookie", "xtvrn=$481979$; xtan481979=-; xtant481979=1; eZSESSID=hqip6l12flq863ot99ir82o3i3");
+                request.Headers.Add("Cookie", "xtvrn=$481979$; xtan481979=-; xtant481979=1; eZSESSID=3lv900erb8gllecqk65ekt1dt2");
 
                 request.Timeout = 10000; // 10 sec timeout.
 
@@ -47,7 +47,7 @@ namespace SurveillanceRDV.Requestors
             {
                 // Log this exception.
                 //MainViewModel.Instance.ErrorMessages.Add(ex.Message);
-                Console.WriteLine(DateTime.Now.ToString() + " - Erreur sur " + Owner.Name + ": " + ex.Message);
+                Console.WriteLine(DateTime.Now.ToString() + " - Erreur sur " + Owner.Name + ": " + ex.ToString());
 
                 return null;
             }

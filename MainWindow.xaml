@@ -13,6 +13,7 @@
         Height="600" 
         Width="640"
         Closed="Window_Closed"
+        Name="uiMainWindow"
         DataContext="{x:Static ViewModels:MainViewModel.Instance}">
     <Grid>
         <Grid.RowDefinitions>
@@ -29,7 +30,7 @@
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="50" />
                             <ColumnDefinition Width="30" />
                             <ColumnDefinition Width="200" />
                             <ColumnDefinition Width="30" />

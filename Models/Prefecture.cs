@@ -1,4 +1,4 @@
-﻿using SurveillanceRDV.Requestors;
+using SurveillanceRDV.Requestors;
 using SurveillanceRDV.Utilities;
 using System;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ namespace SurveillanceRDV.Models
             }
         }
 
-        public Prefecture(string id, string name, string redirectURL, IPrefectureRequestor requestor, int queryTime)
+        public Prefecture(string id, string name, string redirectURL, IPrefectureRequestor requestor)
         {
             _id = id;
             _name = name;
@@ -30,7 +30,7 @@ namespace SurveillanceRDV.Models
 
             _enabled = RegistryUtility.GetPrefectureQueryEnabled(_id);
 
-            _queryTime = queryTime;
+            _queryTime = PrefectureConfiguration.GetPrefectureQueryTime(_id);
             _secondsUntilQuery = 0;
         }
 
