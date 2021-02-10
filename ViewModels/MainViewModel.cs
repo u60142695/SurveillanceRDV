@@ -112,50 +112,50 @@ namespace SurveillanceRDV.ViewModels
             // 1. Sarcelles
             Prefectures.Add(new Prefecture("95_SARCELLES",
                                            "95 - Sarcelles",
-                                           @"https://www.val-doise.gouv.fr/booking/create/5260/0",
+                                           @"https://www.val-doise.gouv.fr/booking/create/5260/1",
                                            new GenericPrefectureRequestor() { TargetURL = @"https://www.val-doise.gouv.fr/booking/create/5260/0" }));
 
             // 2. Bobigny
             Prefectures.Add(new Prefecture("93_BOBIGNY",
                                            "93 - Bobigny",
-                                           @"https://www.seine-saint-denis.gouv.fr/booking/create/9829/0",
+                                           @"https://www.seine-saint-denis.gouv.fr/booking/create/9829/1",
                                            new GenericPrefectureRequestor() { TargetURL = @"https://www.seine-saint-denis.gouv.fr/booking/create/9829/0" }));
 
             // 3. Le Raincy
             Prefectures.Add(new Prefecture("93_RAINCY",
                                            "93 - Le Raincy",
-                                           @"https://www.seine-saint-denis.gouv.fr/booking/create/10317/0",
+                                           @"https://www.seine-saint-denis.gouv.fr/booking/create/10317/1",
                                            new GenericPrefectureRequestor() { TargetURL = @"https://www.seine-saint-denis.gouv.fr/booking/create/10317/0" }));
 
             // 4. Nanterre
             Prefectures.Add(new Prefecture("92_NANTERRE",
                                            "92 - Nanterre", 
-                                           @"https://www.hauts-de-seine.gouv.fr/booking/create/12491",
+                                           @"https://www.hauts-de-seine.gouv.fr/booking/create/12491/1",
                                            new GenericPrefectureRequestor() { TargetURL = @"https://www.hauts-de-seine.gouv.fr/booking/create/12491" }));
 
             // 5. Paris - VPF13
             Prefectures.Add(new Prefecture("75_VPF13",
                                            "75 - VPF-13",
-                                           @"http://pprdv.interieur.gouv.fr/booking/create/948",
-                                           new GenericPrefectureRequestor() { TargetURL = @"http://pprdv.interieur.gouv.fr/booking/create/948" }));
+                                           @"https://pprdv.interieur.gouv.fr/booking/create/948/1",
+                                           new ParisPrefectureRequestor() { TargetURL = @"https://pprdv.interieur.gouv.fr/booking/create/948/1" }));
 
             // 6. Paris - VPF17
             Prefectures.Add(new Prefecture("75_VPF17",
                                            "75 - VPF-17",
-                                           @"http://pprdv.interieur.gouv.fr/booking/create/953",
-                                           new GenericPrefectureRequestor() { TargetURL = @"http://pprdv.interieur.gouv.fr/booking/create/953" }));
+                                           @"https://pprdv.interieur.gouv.fr/booking/create/953/1",
+                                           new ParisPrefectureRequestor() { TargetURL = @"https://pprdv.interieur.gouv.fr/booking/create/953/1" }));
 
             // 7. Paris - SAL13
             Prefectures.Add(new Prefecture("75_SAL13",
                                            "75 - SAL-13",
-                                           @"http://pprdv.interieur.gouv.fr/booking/create/885",
-                                           new GenericPrefectureRequestor() { TargetURL = @"http://pprdv.interieur.gouv.fr/booking/create/885" }));
+                                           @"https://pprdv.interieur.gouv.fr/booking/create/885/1",
+                                           new ParisPrefectureRequestor() { TargetURL = @"https://pprdv.interieur.gouv.fr/booking/create/885/1" }));
 
             // 8. Paris - SAL17
             Prefectures.Add(new Prefecture("75_SAL17",
                                            "75 - SAL-17",
-                                           @"http://pprdv.interieur.gouv.fr/booking/create/876",
-                                           new GenericPrefectureRequestor() { TargetURL = @"http://pprdv.interieur.gouv.fr/booking/create/876" }));
+                                           @"https://pprdv.interieur.gouv.fr/booking/create/876/1",
+                                           new ParisPrefectureRequestor() { TargetURL = @"https://pprdv.interieur.gouv.fr/booking/create/876/1" }));
 
             // 5. Creteil
             /*Prefectures.Add(new Prefecture("94_CRETEIL",

@@ -8,7 +8,7 @@ using System.Text;
 
 namespace SurveillanceRDV.Requestors
 {
-    public class GenericPrefectureRequestor : IPrefectureRequestor
+    public class ParisPrefectureRequestor : IPrefectureRequestor
     {
         public string TargetURL { get; set; }
         
@@ -18,17 +18,24 @@ namespace SurveillanceRDV.Requestors
             {
                 var request = (HttpWebRequest)WebRequest.Create(TargetURL);
 
-                var postData = "condition=on&nextButton=Effectuer une demande de rendez-vous";
+                var postData = "planning=949&nextButton=Etape+suivante";
                 var data = Encoding.ASCII.GetBytes(postData);
 
                 request.Method = "POST";
                 request.ContentType = "application/x-www-form-urlencoded";
                 request.ContentLength = data.Length;
-                request.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36";
+                request.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.152 Safari/537.36";
                 request.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8";
-                //request.KeepAlive = true;
+                request.KeepAlive = true;
                 request.Referer = TargetURL;
-                request.Headers.Add("Cookie", "xtvrn=$481979$; xtan481979=-; xtant481979=1; eZSESSID=3lv900erb8gllecqk65ekt1dt2");
+                request.Headers.Add("Cookie", "eZSESSID=pedkbehc25ghp083fb3kuva2o4; _ga=GA1.3.965872204.1612609943");
+                request.Headers.Add("Sec-Fetch-Dest", "document");
+                request.Headers.Add("Sec-Fetch-Mode", "navigate");
+                request.Headers.Add("Sec-Fetch-Site", "same-origin");
+                request.Headers.Add("Sec-Fetch-User", "?1");
+                request.Headers.Add("Sec-GPC", "1");
+                request.Headers.Add("Upgrade-Insecure-Requests", "1");
+                request.AllowAutoRedirect = true;
 
                 request.Timeout = 10000; // 10 sec timeout.
 

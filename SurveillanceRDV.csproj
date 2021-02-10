@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>https://raw.githubusercontent.com/u60142695/SurveillanceRDV/master/publish/</InstallUrl>
     <UpdateUrl>https://raw.githubusercontent.com/u60142695/SurveillanceRDV/master/publish/</UpdateUrl>
-    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -91,6 +91,7 @@
     <Compile Include="Models\Prefecture.cs" />
     <Compile Include="PrefectureConfiguration.cs" />
     <Compile Include="Requestors\CreteilPrefectureRequestor.cs" />
+    <Compile Include="Requestors\ParisPrefectureRequestor.cs" />
     <Compile Include="Requestors\GenericPrefectureRequestor.cs" />
     <Compile Include="Requestors\IPrefectureRequestor.cs" />
     <Compile Include="Utilities\RegistryUtility.cs" />
