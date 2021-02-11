@@ -137,13 +137,13 @@ namespace SurveillanceRDV.ViewModels
             Prefectures.Add(new Prefecture("75_VPF13",
                                            "75 - VPF-13",
                                            @"https://pprdv.interieur.gouv.fr/booking/create/948/1",
-                                           new ParisPrefectureRequestor() { TargetURL = @"https://pprdv.interieur.gouv.fr/booking/create/948/1" }));
+                                           new GenericPrefectureRequestor() { TargetURL = @"https://pprdv.interieur.gouv.fr/booking/create/948/0" }));
 
             // 6. Paris - VPF17
             Prefectures.Add(new Prefecture("75_VPF17",
                                            "75 - VPF-17",
                                            @"https://pprdv.interieur.gouv.fr/booking/create/953/1",
-                                           new ParisPrefectureRequestor() { TargetURL = @"https://pprdv.interieur.gouv.fr/booking/create/953/1" }));
+                                           new GenericPrefectureRequestor() { TargetURL = @"https://pprdv.interieur.gouv.fr/booking/create/953/0" }));
 
             // 7. Paris - SAL13
             Prefectures.Add(new Prefecture("75_SAL13",
