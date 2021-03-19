@@ -37,7 +37,7 @@ namespace SurveillanceRDV.Requestors
                 request.Headers.Add("Upgrade-Insecure-Requests", "1");
                 request.AllowAutoRedirect = true;
 
-                request.Timeout = 10000; // 10 sec timeout.
+                request.Timeout = 20000; // 20 sec timeout.
 
                 using (var stream = request.GetRequestStream())
                 {

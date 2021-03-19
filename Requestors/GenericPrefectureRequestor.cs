@@ -30,7 +30,7 @@ namespace SurveillanceRDV.Requestors
                 request.Referer = TargetURL;
                 request.Headers.Add("Cookie", "xtvrn=$481979$; xtan481979=-; xtant481979=1; eZSESSID=3lv900erb8gllecqk65ekt1dt2");
 
-                request.Timeout = 10000; // 10 sec timeout.
+                request.Timeout = 20000; // 20 sec timeout.
 
                 using (var stream = request.GetRequestStream())
                 {

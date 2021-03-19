@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -37,7 +37,7 @@ namespace SurveillanceRDV.Requestors
                 request.Headers.Add("Cookie", "JSESSIONID=2FB4321F69FB7EAC142E7A1E34B23771.worker_gfa1; visid_incap_651915=OcvsYOkgTmmdbVDrb3W+wbxm1lwAAAAAQUIPAAAAAAD9pd39BHYqNO4gsyOf9zX+; ID_ROUTE_GFA=.worker_gfa1");
                 request.Headers.Add("Origin", "https://rdv-etrangers-94.interieur.gouv.fr");
 
-                request.Timeout = 10000; // 10 sec timeout.
+                request.Timeout = 20000; // 20 sec timeout.
 
                 using (var stream = request.GetRequestStream())
                 {
