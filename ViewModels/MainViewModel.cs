@@ -157,6 +157,12 @@ namespace SurveillanceRDV.ViewModels
                                            @"https://pprdv.interieur.gouv.fr/booking/create/876/1",
                                            new ParisPrefectureRequestor() { TargetURL = @"https://pprdv.interieur.gouv.fr/booking/create/876/1" }));
 
+            // 9. Paris - ALGR
+            Prefectures.Add(new Prefecture("75_ALGR",
+                                           "75 - ALGR",
+                                           @"https://pprdv.interieur.gouv.fr/booking/create/957/1",
+                                           new ParisPrefectureRequestor() { TargetURL = @"https://pprdv.interieur.gouv.fr/booking/create/957/1" }));
+
             // 5. Creteil
             /*Prefectures.Add(new Prefecture("94_CRETEIL",
                                            "94 - Creteil",
