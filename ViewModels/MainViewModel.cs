@@ -148,14 +148,14 @@ namespace SurveillanceRDV.ViewModels
             // 7. Paris - SAL13
             Prefectures.Add(new Prefecture("75_SAL13",
                                            "75 - SAL-13",
-                                           @"https://pprdv.interieur.gouv.fr/booking/create/885/1",
-                                           new ParisPrefectureRequestor() { TargetURL = @"https://pprdv.interieur.gouv.fr/booking/create/885/1" }));
+                                           @"https://pprdv.interieur.gouv.fr/booking/create/885/4",
+                                           new ParisPrefectureRequestor() { TargetURL = @"https://pprdv.interieur.gouv.fr/booking/create/885/4" }));
 
             // 8. Paris - SAL17
             Prefectures.Add(new Prefecture("75_SAL17",
                                            "75 - SAL-17",
-                                           @"https://pprdv.interieur.gouv.fr/booking/create/876/1",
-                                           new ParisPrefectureRequestor() { TargetURL = @"https://pprdv.interieur.gouv.fr/booking/create/876/1" }));
+                                           @"https://pprdv.interieur.gouv.fr/booking/create/876/4",
+                                           new ParisPrefectureRequestor() { TargetURL = @"https://pprdv.interieur.gouv.fr/booking/create/876/4" }));
 
             // 9. Paris - ALGR
             Prefectures.Add(new Prefecture("75_ALGR",
